@@ -2,7 +2,7 @@ name: 'Code Check Workflow'
 
 # technically this always runs in Pull rquests, but nowhere else.
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 jobs:
   runs-on: ubuntu-latest
   steps:
