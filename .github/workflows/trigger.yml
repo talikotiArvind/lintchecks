@@ -10,4 +10,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Code pipeline action checks
-        uses: ./github/actions/dummy
+        uses: ./.github/actions/dummy
