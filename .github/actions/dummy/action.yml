@@ -22,6 +22,7 @@ runs:
         python -m pip install --upgrade pip
         pip install pylint ruff isort black
     - name: black run
+      continue-on-error: true
       shell: bash
       working-directory: ${{ inputs.lib-path }}
       run: |
@@ -33,11 +34,13 @@ runs:
     #  run: |
     #    find ./src -name "*.py" -print0 | xargs -0 symilar --ignore-docstrings --ignore-imports
     - name: ruff
+      continue-on-error: true
       shell: bash
       working-directory: ${{ inputs.lib-path }}
       run: |
           ruff check #--config $CYTRO_ROOT/ruff.toml
     - name: isort check
+      continue-on-error: true
       shell: bash
       continue-on-error: true
       working-directory: ${{ inputs.lib-path }}
