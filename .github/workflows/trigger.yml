@@ -15,6 +15,6 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4
     - name: Code checks pipeline
-      uses: ./github/workflows/my-code-checks.yml
+      uses: ./github/actions/dummy.yml
       with:
         lib-path: .
