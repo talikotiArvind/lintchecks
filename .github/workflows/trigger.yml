@@ -1,0 +1,20 @@
+name: 'Code Check Workflow'
+
+# technically this always runs in Pull rquests, but nowhere else.
+on:
+  workflow-dispatch
+
+permissions:
+  packages: read
+  contents: read
+  pull-requests: read
+  id-token: write
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: Code checks pipeline
+      uses: ./github/workflows/my-code-checks.yml
+      with:
+        lib-path: .
