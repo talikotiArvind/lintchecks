@@ -37,9 +37,9 @@ runs:
       shell: bash
       working-directory: ${{ inputs.lib-path }}
       run: |
-          ruff check #--config $CYTRO_ROOT/ruff.toml
+          ruff check
     - name: isort check
       shell: bash
       working-directory: ${{ inputs.lib-path }}
       run: |
-        isort . --check --profile black --filter-files --src $CYTRO_ROOT/lib/cytrolib
+        isort . --check --profile black --filter-files --src .
