@@ -8,9 +8,6 @@ inputs:
     description: "Pylint min threshold to pass"
     required: false
     default: "7"
-  build_trigger_dependency:
-    description: 'The name of the dependency on which this action runs'
-    required: true
 
 runs:
   using: 'composite'
