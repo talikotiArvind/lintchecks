@@ -3,7 +3,9 @@ name: 'Code Check Workflow'
 # technically this always runs in Pull rquests, but nowhere else.
 on:
   workflow_dispatch:
-  [push]:
+  push:
+    branches:
+      - master
 jobs:
   code_check_test:
     runs-on: ubuntu-latest
